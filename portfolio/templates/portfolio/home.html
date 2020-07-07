@@ -1,0 +1,41 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row justify-content-center my-3">
+  <div class="col-5">
+    <img src="{% static 'portfolio/jamie2.jpg' %}" class="img-fluid">
+  </div>
+</div>
+
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+    <h1 id="hometext" class="font-weight-bold">Jamie Kadmiela Turla</h1>
+    <p class="lead"> is Commander-in-Chief at NumberBlocks and lives in Imus Cavite 😊</p>
+  </div>
+</div>
+
+<h2 class="mt-5">My Arts</h2>
+<hr>
+<div class="row">
+  {% for project in projects %}
+  <div class="col-lg-4 col-md-6">
+
+    {% if project.url %}
+    <a href="{{ project.url }}">
+      <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    </a>
+    {% else %}
+
+    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    {% endif %}
+
+    <h4>{{ project.title }}</h4>
+    <p>{{ project.description }}</p>
+    <br>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
