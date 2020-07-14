@@ -1,0 +1,14 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="jumbotron bg-cover" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%), url(https://pbs.twimg.com/media/DAf-BJJXcAA5Kkz.jpg:large)">
+      <h2>{{ project.title }}</h2>
+      <img src="{{ project.image.url }}" alt="" class="img-thumbnail">
+      <p>{{ project.description }}</p>
+    </div>
+
+  </div>
+
+{% endblock %}

@@ -23,10 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '111aovqw(7ga#tlsqfnn%8&*0q2(f--q895(3)sw_kzin_yu2&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['nelmie07.pythonanywhere.com']
-
+# ALLOWED_HOSTS = ['nelmie07.pythonanywhere.com']
+ALLOWED_HOSTS =[]
 
 # Application definition
 
@@ -125,8 +125,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
-try:
-    from .local_settings import *
-except ImportError:
-    print('Looks like no local file, You must go to production')
+#
+# try:
+#     from .local_settings import *
+# except ImportError:
+#     print('Looks like no local file, You must go to production')
